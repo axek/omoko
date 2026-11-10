@@ -31,7 +31,7 @@ button, input { font: inherit; }
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
 }
-.brand-mark { display: block; width: 144px; height: auto; fill: var(--ink); }
+.brand-mark { display: block; width: 144px; height: auto; }
 .nav-links { display: flex; align-items: center; gap: 34px; font-size: 13px; font-weight: 600; }
 .nav-links a { transition: opacity .2s; }
 .nav-links a:hover { opacity: .55; }
@@ -136,7 +136,7 @@ button, input { font: inherit; }
 .form-note { margin: 14px 0 0; font: 10px "DM Mono"; color: var(--muted); }
 
 .site-footer { padding: 65px 0 32px; border-top: 1px solid var(--line); }
-.footer-mark { width: min(520px, 70vw); fill: var(--ink); }
+.footer-mark { display: block; width: min(520px, 70vw); height: auto; }
 .footer-meta { margin-top: 80px; display: grid; grid-template-columns: 1fr auto auto; gap: 50px; align-items: end; font-size: 12px; }
 .footer-meta p, .footer-meta span { color: var(--muted); }
 .footer-meta div { display: flex; gap: 30px; }
