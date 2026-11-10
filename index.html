@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omoko is a benchmark for testing how AI agents behave when real work goes wrong."
+    />
+    <title>Omoko — A bad day for your AI agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Omoko home">
+        <svg class="brand-mark" viewBox="0 0 300 64" role="img" aria-label="Omoko">
+          <rect x="3" y="7" width="50" height="50" rx="7" />
+          <path d="M62 7h7l21 22L111 7h7v50H62z" />
+          <path d="M139 7h22l15 15v20l-15 15h-22l-15-15V22z" />
+          <path d="M184 7h50l-22 25 22 25h-50z" />
+          <circle cx="270" cy="32" r="25" />
+        </svg>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#benchmark">Benchmark</a>
+        <a href="#method">Method</a>
+        <a href="#scorecard">Scorecard</a>
+        <a class="nav-cta" href="#access">Get early access</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="eyebrow"><span class="status-dot"></span> Agent reliability benchmark</div>
+        <h1>Give every agent<br />the same bad day.</h1>
+        <div class="hero-bottom">
+          <p class="hero-copy">
+            Omoko measures how AI agents behave when real work gets messy —
+            interrupted workflows, ambiguous requests, broken tools, and costly mistakes.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#access">Run the benchmark <span>↗</span></a>
+            <a class="text-link" href="#method">Read the methodology <span>↓</span></a>
+          </div>
+        </div>
+        <div class="hero-field" aria-hidden="true">
+          <div class="field-grid"></div>
+          <div class="run run-a"><span>01</span></div>
+          <div class="run run-b"><span>02</span></div>
+          <div class="run run-c"><span>03</span></div>
+          <div class="incident"><span>INCIDENT</span><b>!</b></div>
+          <svg class="trace" viewBox="0 0 1000 280" preserveAspectRatio="none">
+            <path d="M0,155 C120,155 118,70 230,70 S338,220 455,220 S568,100 680,100 S790,155 1000,155" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="statement section-shell" id="benchmark">
+        <p class="section-label">01 / The benchmark</p>
+        <div class="statement-grid">
+          <h2>Benchmarks test the happy path.<br /><em>We test what happens next.</em></h2>
+          <p>
+            Real agents encounter missing context, partial failures, conflicting goals,
+            and users who change their minds. Omoko turns those moments into repeatable,
+            measurable scenarios.
+          </p>
+        </div>
+        <div class="principles">
+          <article>
+            <span class="principle-number">01</span>
+            <h3>Same conditions</h3>
+            <p>Every agent receives the same environment, tools, constraints, and incident.</p>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <h3>Different outcomes</h3>
+            <p>We evaluate the decisions agents make, not just whether a final task completes.</p>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <h3>Visible tradeoffs</h3>
+            <p>Compare reliability, recovery, efficiency, safety, and user impact side by side.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="method section-shell" id="method">
+        <div class="method-heading">
+          <p class="section-label">02 / Method</p>
+          <h2>A controlled incident,<br />not a trick question.</h2>
+        </div>
+        <div class="scenario-list">
+          <article class="scenario active" data-index="01">
+            <div class="scenario-top"><span>01</span><span class="scenario-state">Normal operation</span></div>
+            <h3>Give the agent a real job</h3>
+            <p>Tools, state, history, and a goal — enough context to behave like a working system.</p>
+          </article>
+          <article class="scenario" data-index="02">
+            <div class="scenario-top"><span>02</span><span class="scenario-state">Disruption</span></div>
+            <h3>Introduce one bad day</h3>
+            <p>A failed dependency, an ambiguous instruction, a surprise constraint, or bad data.</p>
+          </article>
+          <article class="scenario" data-index="03">
+            <div class="scenario-top"><span>03</span><span class="scenario-state">Evaluation</span></div>
+            <h3>Inspect the whole trace</h3>
+            <p>Score the outcome and the path: detection, decisions, communication, and recovery.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="scorecard section-shell" id="scorecard">
+        <div class="scorecard-copy">
+          <p class="section-label">03 / Scorecard</p>
+          <h2>One score is never the whole story.</h2>
+          <p>
+            Omoko exposes the shape of agent behavior. A model can finish the task and still
+            create unnecessary risk. Another can recover gracefully after a failure.
+          </p>
+          <a class="text-link" href="#access">View sample scorecard <span>↗</span></a>
+        </div>
+        <div class="score-panel">
+          <div class="score-panel-head">
+            <div><span>RUN</span><strong>retail-refund-07</strong></div>
+            <div class="score-total"><span>OVERALL</span><strong>82</strong><small>/100</small></div>
+          </div>
+          <div class="metric">
+            <div><span>Task completion</span><strong>94</strong></div>
+            <div class="metric-bar"><i style="--score: 94%"></i></div>
+          </div>
+          <div class="metric">
+            <div><span>Error recovery</span><strong>86</strong></div>
+            <div class="metric-bar"><i style="--score: 86%"></i></div>
+          </div>
+          <div class="metric flagged">
+            <div><span>Policy compliance</span><strong>61</strong></div>
+            <div class="metric-bar"><i style="--score: 61%"></i></div>
+          </div>
+          <div class="metric">
+            <div><span>User communication</span><strong>88</strong></div>
+            <div class="metric-bar"><i style="--score: 88%"></i></div>
+          </div>
+          <div class="score-note"><span>!</span> Agent completed the refund but exposed an internal policy note.</div>
+        </div>
+      </section>
+
+      <section class="use-cases section-shell">
+        <p class="section-label">Built for consequential work</p>
+        <div class="case-row">
+          <span>Customer support</span><span>Commerce</span><span>Operations</span>
+          <span>Research</span><span>Browser agents</span><span>Enterprise tools</span>
+        </div>
+      </section>
+
+      <section class="access section-shell" id="access">
+        <div>
+          <p class="section-label">Early access</p>
+          <h2>How does your agent<br />handle a bad day?</h2>
+        </div>
+        <form class="access-form">
+          <label for="email">Work email</label>
+          <div class="input-row">
+            <input id="email" type="email" placeholder="you@company.com" required />
+            <button type="submit">Request access <span>↗</span></button>
+          </div>
+          <p class="form-note">Private beta · No spam · Methodology updates included</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <svg class="footer-mark" viewBox="0 0 300 64" aria-hidden="true">
+        <rect x="3" y="7" width="50" height="50" rx="7" />
+        <path d="M62 7h7l21 22L111 7h7v50H62z" />
+        <path d="M139 7h22l15 15v20l-15 15h-22l-15-15V22z" />
+        <path d="M184 7h50l-22 25 22 25h-50z" />
+        <circle cx="270" cy="32" r="25" />
+      </svg>
+      <div class="footer-meta">
+        <p>Agent reliability, measured under pressure.</p>
+        <div><a href="#">GitHub</a><a href="#">Methodology</a><a href="#">Contact</a></div>
+        <span>© 2026 Omoko</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
